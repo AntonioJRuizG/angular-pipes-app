@@ -27,6 +27,12 @@ This is a brief list of the core topics worked with this project:
 3. Specialized module for PrimeNG modules
 
 PrimeNG is a package of styled components that provide Angular-based functionalities for quickly creating elegant, beautiful, and functional applications
+
+4. Custom Pipes
+
+5. Arguments to Pipes
+
+6. Manual SortableTable and Using PrimeNG
 ```
 
 ## Development server
