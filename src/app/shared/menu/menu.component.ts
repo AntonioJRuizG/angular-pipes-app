@@ -9,6 +9,10 @@ export class MenuComponent implements OnInit {
   public items: MenuItem[] = [];
 
   ngOnInit(): void {
-    this.items = [{ label: 'Home', icon: 'pi pi-home' }];
+    this.items = [
+      { label: 'New', icon: 'pi pi-plus' },
+      { label: 'Open', icon: 'pi pi-download' },
+      { label: 'Undo', icon: 'pi pi-undo' },
+    ];
   }
 }
