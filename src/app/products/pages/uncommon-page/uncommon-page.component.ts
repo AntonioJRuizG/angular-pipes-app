@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'products-uncommon-page',
@@ -34,4 +35,19 @@ export class UncommonPageComponent {
   deleteClient(): void {
     this.clients.shift();
   }
+
+  // KeyValue pipe
+  public person = {
+    name: 'Homer',
+    age: 30,
+    address: 'Springfield, USA',
+  };
+
+  // Async pipe
+  public myObservableTimer = interval(2000);
+  public promiseValue = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('We have a promise.'), 3500;
+    });
+  });
 }
