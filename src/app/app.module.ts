@@ -23,7 +23,7 @@ registerLocaleData(localeFR);
     BrowserAnimationsModule,
     SharedModule,
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'es' }],
+  providers: [{ provide: LOCALE_ID, useValue: 'en-UK' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
