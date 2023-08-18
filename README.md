@@ -2,9 +2,38 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
+## Topics
+
+```text
+This is a brief list of the core topics worked with this project:
+
+1. All Angular Pipes to date
+
+   * Uppercase
+   * Lowercase
+   * TitleCase
+   * Date
+   * Decimal
+   * Currency
+   * Percent
+   * i18nSelect
+   * i18Plural
+   * KeyValue
+   * Json
+   * Async
+
+2. PrimeNG
+
+3. Specialized module for PrimeNG modules
+
+PrimeNG is a package of styled components that provide Angular-based functionalities for quickly creating elegant, beautiful, and functional applications
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+**App Deployment**: [App preview](https://angularpipesapp.netlify.app/)
 
 ## Code scaffolding
 
