@@ -4,4 +4,8 @@ import { Component } from '@angular/core';
   selector: 'products-basics-page',
   templateUrl: './basics-page.component.html',
 })
-export class BasicsPageComponent {}
+export class BasicsPageComponent {
+  public nameLower: string = 'antonio';
+  public nameUpper: string = 'ANTONIO';
+  public fullName: string = 'AntoNIo';
+}
