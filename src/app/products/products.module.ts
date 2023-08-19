@@ -10,6 +10,8 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { OrderComponent } from './pages/order/order.component';
 import { ToggleCasePipe } from './pipes/toggle-case.pipe';
 import { IsAlivePipe } from './pipes/isAlive.pipe';
+import { SortByPipe } from './pipes/sortBy.pipe';
+import { EnumIntToDescriptionPipe } from './pipes/enumIntToDescription.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { IsAlivePipe } from './pipes/isAlive.pipe';
     // Pipes
     ToggleCasePipe,
     IsAlivePipe,
+    SortByPipe,
+    EnumIntToDescriptionPipe,
   ],
   imports: [CommonModule, ProductsRoutingModule, PrimeNgModule],
 })

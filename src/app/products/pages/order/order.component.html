@@ -19,16 +19,23 @@
   </div>
 
   <div class="p-toolbar-group-end">
-    <p-button class="mr-2" label="By name" icon="pi pi-sort" styleClass="p-button-success"></p-button>
-    <p-button class="mr-2" label="By fly" icon="pi pi-sort" styleClass="p-button-danger"></p-button>
-    <p-button class="mr-2" label="By color" icon="pi pi-sort" styleClass="p-button-help"></p-button>
+    <p-button class="mr-2" (click)="changeOrder('name')" label="By name" icon="pi pi-sort"
+      styleClass="p-button-success"></p-button>
+    <p-button class="mr-2" (click)="changeOrder('time')" label="By era" icon="pi pi-sort"
+      styleClass="p-button-danger"></p-button>
+    <p-button class="mr-2" (click)="changeOrder('country')" label="By nationality" icon="pi pi-sort"
+      styleClass="p-button-help"></p-button>
+    <p-button class="mr-2" (click)="changeOrder('style')" label="By style" icon="pi pi-sort"
+      styleClass="p-button-help"></p-button>
+    <p-button class="mr-2" (click)="changeOrder('isAlive')" label="By alive" icon="pi pi-sort"
+      styleClass="p-button-help"></p-button>
   </div>
 </p-toolbar>
 
 <div class="grid">
   <div class="col mt-2">
     <p-panel header="Female Artists You Need to Know">
-      <p-table [value]="artists" [tableStyle]="{ 'min-width': '50rem' }">
+      <p-table [value]="artists | sortBy:orderBy" [tableStyle]="{ 'min-width': '50rem' }">
         <ng-template pTemplate="header">
           <tr>
             <th>Name</th>
@@ -43,7 +50,7 @@
             <td>{{ artist.name }}</td>
             <td>{{ artist.time }}</td>
             <td>{{ artist.country }}</td>
-            <td>{{ artist.style }}</td>
+            <td>{{ artist.style | enumIntToDescription}}</td>
             <td>{{ artist.isAlive | isAlive }}</td>
           </tr>
         </ng-template>

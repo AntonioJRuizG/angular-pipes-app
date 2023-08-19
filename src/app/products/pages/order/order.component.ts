@@ -7,6 +7,8 @@ import { Artist, Style } from '../../interfaces/artist';
 })
 export class OrderComponent {
   public isUpperCase: boolean = false;
+  public orderBy?: keyof Artist;
+
   public artists: Artist[] = [
     {
       name: 'Louise Bourgeois',
@@ -61,5 +63,9 @@ export class OrderComponent {
 
   toggleUpperCase(): void {
     this.isUpperCase = !this.isUpperCase;
+  }
+
+  changeOrder(value: keyof Artist) {
+    this.orderBy = value;
   }
 }
