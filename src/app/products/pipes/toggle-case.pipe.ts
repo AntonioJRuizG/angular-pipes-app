@@ -1,4 +1,4 @@
-// Customo pipe made from scratch.
+// Custom pipe made from scratch.
 
 import { Pipe, PipeTransform } from '@angular/core';
 
