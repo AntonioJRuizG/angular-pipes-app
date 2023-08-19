@@ -8,20 +8,19 @@
 <div class="grid">
   <div class="col-12 md:col-4">
     <p-card header="toggleCase">
-      {{'Example text' | toggleCase:true}}
+      {{'Example text' | toggleCase:isUpperCase}}
     </p-card>
   </div>
 </div>
 
 <p-toolbar>
   <div class="p-toolbar-group-start">
-    <p-button label="New" icon="pi pi-plus" class="mr-2"></p-button>
-    <p-button label="Upload" icon="pi pi-upload" styleClass="p-button-success"></p-button>
-    <i class="p-toolbar-separator pi pi-bars mr-2" style="vertical-align: middle"></i>
+    <p-button (onClick)="toggleUpperCase()" label="ToogleCase" icon="pi pi-search"></p-button>
   </div>
+
   <div class="p-toolbar-group-end">
-    <p-button icon="pi pi-search" class="mr-2"></p-button>
-    <p-button icon="pi pi-calendar" styleClass="p-button-success mr-2"></p-button>
-    <p-button icon="pi pi-times" styleClass="p-button-danger"></p-button>
+    <p-button class="mr-2" label="By name" icon="pi pi-sort" styleClass="p-button-success"></p-button>
+    <p-button class="mr-2" label="By fly" icon="pi pi-sort" styleClass="p-button-danger"></p-button>
+    <p-button class="mr-2" label="By color" icon="pi pi-sort" styleClass="p-button-help"></p-button>
   </div>
 </p-toolbar>
