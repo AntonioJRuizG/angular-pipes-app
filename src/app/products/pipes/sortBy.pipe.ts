@@ -13,7 +13,7 @@ export class SortByPipe implements PipeTransform {
     switch (sortBy) {
       case 'name':
         return artists.sort((a, b) =>
-          a.name > b.name ? comparison : -comparison
+          a.name.toLowerCase() < b.name.toLowerCase() ? comparison : -comparison
         );
       case 'isAlive':
         return artists.sort((a, b) =>
@@ -25,7 +25,9 @@ export class SortByPipe implements PipeTransform {
         );
       case 'country':
         return artists.sort((a, b) =>
-          a.country > b.country ? comparison : -comparison
+          a.country.toLowerCase() > b.country.toLowerCase()
+            ? comparison
+            : -comparison
         );
       case 'time':
         return artists.sort((a, b) =>

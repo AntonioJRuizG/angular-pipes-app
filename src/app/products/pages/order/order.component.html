@@ -38,11 +38,11 @@
         </ng-template>
         <ng-template pTemplate="body" let-artist>
           <tr>
-            <td>{{ artist.name }}</td>
-            <td>{{ artist.time }}</td>
-            <td>{{ artist.country }}</td>
-            <td>{{ artist.style | enumIntToDescription}}</td>
-            <td>{{ artist.isAlive | isAlive }}</td>
+            <td>{{ artist.name | titlecase}}</td>
+            <td>{{ artist.time | titlecase}}</td>
+            <td>{{ artist.country | titlecase}}</td>
+            <td>{{ artist.style | enumIntToDescription| titlecase}}</td>
+            <td>{{ artist.isAlive | isAlive | titlecase}}</td>
           </tr>
         </ng-template>
       </p-table>
