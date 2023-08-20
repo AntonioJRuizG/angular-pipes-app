@@ -1,0 +1,63 @@
+<p-panel header="Custom Pipes" class="p-1">
+  <p>
+    Angular Custom Pipes created from scratch
+  </p>
+</p-panel>
+
+<p-toolbar>
+  <div class="p-toolbar-group-start">
+    <p-button (onClick)="toggleUpperCase()" label="ToogleCase" icon="pi pi-arrow-up"></p-button>
+  </div>
+
+  <!--
+  TEMP. Manual sorting table made from scratch.
+  <div class="p-toolbar-group-end">
+    <p-button class="mr-2" (click)="changeOrder('name')" label="By name" icon="pi pi-sort"
+      styleClass="p-button-success"></p-button>
+    <p-button class="mr-2" (click)="changeOrder('time')" label="By era" icon="pi pi-sort"
+      styleClass="p-button-danger"></p-button>
+    <p-button class="mr-2" (click)="changeOrder('country')" label="By nationality" icon="pi pi-sort"
+      styleClass="p-button-help"></p-button>
+    <p-button class="mr-2" (click)="changeOrder('style')" label="By style" icon="pi pi-sort"
+      styleClass="p-button-help"></p-button>
+    <p-button class="mr-2" (click)="changeOrder('isAlive')" label="By alive" icon="pi pi-sort"
+      styleClass="p-button-help"></p-button>
+  </div>
+-->
+</p-toolbar>
+
+<div class="grid">
+  <div class="col mt-2">
+    <p-panel header="Female Artists You Need to Know">
+
+      <div class="card">
+        <p-table [value]="artists" [tableStyle]="{'min-width': '60rem'}">
+          <ng-template pTemplate="header">
+            <tr>
+              <th pSortableColumn="name" style="width:20%">{{'Name' | toggleCase:isUpperCase}} <p-sortIcon
+                  field="name"></p-sortIcon></th>
+              <th pSortableColumn="time" style="width:20%">{{'Era'| toggleCase:isUpperCase}} <p-sortIcon
+                  field="time"></p-sortIcon></th>
+              <th pSortableColumn="country" style="width:20%">{{'Nationality' | toggleCase:isUpperCase}} <p-sortIcon
+                  field="country"></p-sortIcon>
+              </th>
+              <th pSortableColumn="style" style="width:20%">{{'Style' | toggleCase:isUpperCase}} <p-sortIcon
+                  field="style"></p-sortIcon></th>
+              <th pSortableColumn="isAlive" style="width:20%">{{'Alive' | toggleCase:isUpperCase}} <p-sortIcon
+                  field="isAlive"></p-sortIcon></th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-artist>
+            <tr>
+              <td>{{ artist.name | titlecase}}</td>
+              <td>{{ artist.time | titlecase}}</td>
+              <td>{{ artist.country | titlecase}}</td>
+              <td>{{ artist.style | enumIntToDescription| titlecase}}</td>
+              <td>{{ artist.isAlive | isAlive | titlecase}}</td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </p-panel>
+  </div>
+</div>

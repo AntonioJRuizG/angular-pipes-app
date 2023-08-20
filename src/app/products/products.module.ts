@@ -7,6 +7,11 @@ import { BasicsPageComponent } from './pages/basics-page/basics-page.component';
 import { NumbersPageComponent } from './pages/numbers-page/numbers-page.component';
 import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { OrderComponent } from './pages/order/order.component';
+import { ToggleCasePipe } from './pipes/toggle-case.pipe';
+import { IsAlivePipe } from './pipes/isAlive.pipe';
+import { SortByPipe } from './pipes/sortBy.pipe';
+import { EnumIntToDescriptionPipe } from './pipes/enumIntToDescription.pipe';
 
 @NgModule({
   declarations: [
@@ -14,6 +19,13 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
     BasicsPageComponent,
     NumbersPageComponent,
     UncommonPageComponent,
+    OrderComponent,
+
+    // Pipes
+    ToggleCasePipe,
+    IsAlivePipe,
+    SortByPipe,
+    EnumIntToDescriptionPipe,
   ],
   imports: [CommonModule, ProductsRoutingModule, PrimeNgModule],
 })
