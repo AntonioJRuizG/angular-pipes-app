@@ -1,21 +1,12 @@
-<p-panel header="Basic pipes" class="p-1">
-  <h1>Custom Pipes</h1>
+<p-panel header="Custom Pipes" class="p-1">
   <p>
-    Angular Custom Pipes
+    Angular Custom Pipes created from scratch
   </p>
 </p-panel>
 
-<div class="grid">
-  <div class="col-12 md:col-4">
-    <p-card header="toggleCase">
-      {{'Example text' | toggleCase:isUpperCase}}
-    </p-card>
-  </div>
-</div>
-
 <p-toolbar>
   <div class="p-toolbar-group-start">
-    <p-button (onClick)="toggleUpperCase()" label="ToogleCase" icon="pi pi-search"></p-button>
+    <p-button (onClick)="toggleUpperCase()" label="ToogleCase" icon="pi pi-arrow-up"></p-button>
   </div>
 
   <div class="p-toolbar-group-end">
@@ -38,11 +29,11 @@
       <p-table [value]="artists | sortBy:comparison:orderBy" [tableStyle]="{ 'min-width': '50rem' }">
         <ng-template pTemplate="header">
           <tr>
-            <th>Name</th>
-            <th>Era</th>
-            <th>Nationality</th>
-            <th>Style</th>
-            <th>Alive</th>
+            <th>{{'Name' | toggleCase:isUpperCase}}</th>
+            <th>{{'Era' | toggleCase:isUpperCase}}</th>
+            <th>{{'Nationality' | toggleCase:isUpperCase}}</th>
+            <th>{{'Style' | toggleCase:isUpperCase}}</th>
+            <th>{{'Alive' | toggleCase:isUpperCase}}</th>
           </tr>
         </ng-template>
         <ng-template pTemplate="body" let-artist>
