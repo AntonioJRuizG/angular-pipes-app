@@ -9,6 +9,8 @@
     <p-button (onClick)="toggleUpperCase()" label="ToogleCase" icon="pi pi-arrow-up"></p-button>
   </div>
 
+  <!--
+  TEMP. Manual sorting table made from scratch.
   <div class="p-toolbar-group-end">
     <p-button class="mr-2" (click)="changeOrder('name')" label="By name" icon="pi pi-sort"
       styleClass="p-button-success"></p-button>
@@ -21,6 +23,7 @@
     <p-button class="mr-2" (click)="changeOrder('isAlive')" label="By alive" icon="pi pi-sort"
       styleClass="p-button-help"></p-button>
   </div>
+-->
 </p-toolbar>
 
 <div class="grid">
@@ -33,7 +36,8 @@
             <tr>
               <th pSortableColumn="name" style="width:20%">{{'Name' | toggleCase:isUpperCase}} <p-sortIcon
                   field="name"></p-sortIcon></th>
-              <th pSortableColumn="time" style="width:20%">{{'Era'}} <p-sortIcon field="time"></p-sortIcon></th>
+              <th pSortableColumn="time" style="width:20%">{{'Era'| toggleCase:isUpperCase}} <p-sortIcon
+                  field="time"></p-sortIcon></th>
               <th pSortableColumn="country" style="width:20%">{{'Nationality' | toggleCase:isUpperCase}} <p-sortIcon
                   field="country"></p-sortIcon>
               </th>
