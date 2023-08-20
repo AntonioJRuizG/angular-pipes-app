@@ -13,7 +13,9 @@ export class SortByPipe implements PipeTransform {
     switch (sortBy) {
       case 'name':
         return artists.sort((a, b) =>
-          a.name.toLowerCase() < b.name.toLowerCase() ? comparison : -comparison
+          comparison === 1
+            ? a.name.localeCompare(b.name)
+            : b.name.localeCompare(a.name)
         );
       case 'isAlive':
         return artists.sort((a, b) =>
