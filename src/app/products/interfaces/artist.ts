@@ -6,11 +6,12 @@ export interface Artist {
   isAlive: boolean;
 }
 
+// Keep ascending order
 export enum Style {
   abstract,
   impressionism,
-  modernism,
-  sculptor,
   minimal,
+  modernism,
   performance,
+  sculptor,
 }
