@@ -35,7 +35,7 @@
 <div class="grid">
   <div class="col mt-2">
     <p-panel header="Female Artists You Need to Know">
-      <p-table [value]="artists | sortBy:orderBy" [tableStyle]="{ 'min-width': '50rem' }">
+      <p-table [value]="artists | sortBy:comparison:orderBy" [tableStyle]="{ 'min-width': '50rem' }">
         <ng-template pTemplate="header">
           <tr>
             <th>Name</th>

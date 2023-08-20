@@ -5,20 +5,32 @@ import { Artist, Style } from '../interfaces/artist';
   name: 'sortBy',
 })
 export class SortByPipe implements PipeTransform {
-  transform(artists: Artist[], sortBy?: keyof Artist | ''): Artist[] {
+  transform(
+    artists: Artist[],
+    comparison: number,
+    sortBy?: keyof Artist | ''
+  ): Artist[] {
     switch (sortBy) {
       case 'name':
-        return artists.sort((a, b) => (a.name > b.name ? 1 : -1));
+        return artists.sort((a, b) =>
+          a.name > b.name ? comparison : -comparison
+        );
       case 'isAlive':
-        return artists.sort((a, b) => (a.isAlive > b.isAlive ? 1 : -1));
+        return artists.sort((a, b) =>
+          a.isAlive < b.isAlive ? comparison : -comparison
+        );
       case 'style':
         return artists.sort((a, b) =>
-          Style[a.style] > Style[b.style] ? 1 : -1
+          Style[a.style] > Style[b.style] ? comparison : -comparison
         );
       case 'country':
-        return artists.sort((a, b) => (a.country > b.country ? 1 : -1));
+        return artists.sort((a, b) =>
+          a.country > b.country ? comparison : -comparison
+        );
       case 'time':
-        return artists.sort((a, b) => (a.time > b.time ? -1 : +1));
+        return artists.sort((a, b) =>
+          a.time < b.time ? comparison : -comparison
+        );
       default:
         return artists;
     }

@@ -8,6 +8,7 @@ import { Artist, Style } from '../../interfaces/artist';
 export class OrderComponent {
   public isUpperCase: boolean = false;
   public orderBy?: keyof Artist;
+  public comparison: number = 1;
 
   public artists: Artist[] = [
     {
@@ -67,5 +68,6 @@ export class OrderComponent {
 
   changeOrder(value: keyof Artist) {
     this.orderBy = value;
+    this.comparison = -this.comparison;
   }
 }
